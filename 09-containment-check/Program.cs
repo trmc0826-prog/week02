@@ -12,5 +12,5 @@ else
 static bool CanContain(int capacity, int occupied, int incoming)
 {
     // TODO
-    return false;
+    return (incoming + occupied) <= capacity;
 }

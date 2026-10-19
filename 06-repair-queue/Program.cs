@@ -11,5 +11,14 @@ int jobNumber = 1;
 
 foreach (string repair in repairs)
 {
-    // TODO: Hopp over kansellerte jobber og nummerer resten.
+    if (repair.StartsWith("CANCELLED:"))
+    {
+        continue;
+    }
+    else
+    {
+        Console.WriteLine($"Job {jobNumber} : {repair}");
+        jobNumber ++;
+    }
 }
+// TODO: Hopp over kansellerte jobber og nummerer resten.
